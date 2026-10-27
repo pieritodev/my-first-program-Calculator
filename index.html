@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora Pro | Piero</title>
+</head>
+<body>
+
+    <!-- La caja calculadora envuelve TODO lo demás -->
+    <div class="calculadora">
+        
+        <!-- Cabecera con el botón de flechita para el panel Pro -->
+        <div class="header-calc">
+            <h2>Calculadora</h2>
+            <button id="btn-toggle-pro" onclick="togglePro()">🔽 Pro</button>
+        </div>
+
+        <!-- Panel Pro desplegable -->
+        <div id="panel-pro" class="panel-pro oculto">
+            <p class="titulo-pro">Funciones Pro:</p>
+            <div class="botones-pro"> <!-- Corregido a minúsculas -->
+                <button class="btn-pro-item" onclick="duplicarNumero()">Duplicar (x2)</button>
+                <button class="btn-pro-item" onclick="calcularPorcentaje()">Calcular 15%</button>
+                <button class="btn-pro-item" onclick="convertirPulgadasACm()">Pulg a Cm</button>
+            </div>
+        </div>
+
+        <!-- Pantalla de resultados -->
+        <div class="pantalla">
+            <h3 id="resultado">0</h3>
+        </div>
+
+        <!-- Teclado (Keypad en minúsculas) -->
+        <div class="keypad">
+            <!-- Fila 1 -->
+            <button class="btn-especial" onclick="borrarTodo()">C</button>
+            <button class="btn-op" onclick="calcularRaiz()">√</button>
+            <button class="btn-op" onclick="calcularCuadrado()">x²</button>
+            <button class="btn-op" onclick="agregarCaracter('/')">÷</button>
+
+            <!-- Fila 2 -->
+            <button onclick="agregarCaracter('7')">7</button>
+            <button onclick="agregarCaracter('8')">8</button>
+            <button onclick="agregarCaracter('9')">9</button>
+            <button class="btn-op" onclick="agregarCaracter('*')">×</button>
+
+            <!-- Fila 3 -->
+            <button onclick="agregarCaracter('4')">4</button>
+            <button onclick="agregarCaracter('5')">5</button>
+            <button onclick="agregarCaracter('6')">6</button>
+            <button class="btn-op" onclick="agregarCaracter('-')">-</button>
+
+            <!-- Fila 4 -->
+            <button onclick="agregarCaracter('1')">1</button>
+            <button onclick="agregarCaracter('2')">2</button>
+            <button onclick="agregarCaracter('3')">3</button>
+            <button class="btn-op" onclick="agregarCaracter('+')">+</button>
+
+            <!-- Fila 5 -->
+            <button onclick="agregarCaracter('0')" class="btn-cero">0</button>
+            <button onclick="agregarCaracter('.')">.</button>
+            <button class="btn-igual" onclick="calcularResultado()">=</button>
+        </div>
+
+    </div> <!-- Aquí se cierra correctamente toda la calculadora -->
+
+    <script src="script.js"></script>
+</body>
+</html>

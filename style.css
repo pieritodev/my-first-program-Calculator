@@ -1,0 +1,168 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.calculadora {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 340px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    border: 2px solid #334155;
+}
+
+.header-calc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+h2 {
+    margin: 0;
+    color: #38bdf8;
+    font-size: 1.1rem;
+}
+
+/* Botón de la flechita Pro */
+#btn-toggle-pro {
+    background-color: #334155;
+    color: #38bdf8;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#btn-toggle-pro:hover {
+    background-color: #475569;
+}
+
+/* Panel Pro desplegable */
+.panel-pro {
+    background-color: #0f172a;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    margin-bottom: 12px;
+}
+
+.oculto {
+    display: none;
+}
+
+.titulo-pro {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin: 0 0 8px 0;
+}
+
+.botones-pro {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.btn-pro-item {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-pro-item:hover {
+    background-color: #7dd3fc;
+}
+
+/* Pantalla de resultados */
+.pantalla {
+    background-color: #090d16;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+    text-align: right;
+    margin-bottom: 15px;
+    min-height: 35px;
+}
+
+#resultado {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #38bdf8;
+    font-family: monospace;
+    overflow-x: auto;
+}
+
+/* Cuadrícula de la calculadora normal (4 columnas exactas) */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+button {
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    background-color: #334155;
+    color: #f8fafc;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+button:hover {
+    background-color: #475569;
+}
+
+/* Estilos especiales para botones operativos */
+.btn-op {
+    background-color: #1e3a8a;
+    color: #93c5fd;
+}
+
+.btn-op:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-especial {
+    background-color: #7f1d1d;
+    color: #fca5a5;
+}
+
+.btn-especial:hover {
+    background-color: #991b1b;
+}
+
+.btn-igual {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+.btn-igual:hover {
+    background-color: #0ea5e9;
+}
+
+.btn-cero {
+    grid-column: span 1;
+}
